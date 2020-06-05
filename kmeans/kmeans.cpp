@@ -91,7 +91,6 @@ int kMeansDemo()
 
 		clusterCount = MIN(clusterCount, sampleCount);
 		std::vector<Point2f> centers;
-
 		for (k = 0; k < clusterCount; k++)
 		{
 			Point center;
@@ -141,15 +140,15 @@ int main()
 	//开始计时
 	double start = static_cast<double>(cvGetTickCount());
 
-	//segColor();
+	segColor();
 
-	kMeansDemo();
+	//kMeansDemo();
 
 	//结束计时
-	double time = ((double)cvGetTickCount() - start) / cvGetTickFrequency();
+	double end = ((double)cvGetTickCount() - start) / cvGetTickFrequency();
 
 	//显示时间
-	cout << "processing time:" << time / 1000 << "ms" << endl;
+	cout << "processing time:" << end / 1000 << "ms" << endl;
 
 
 	return 0;
